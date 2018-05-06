@@ -1,0 +1,23 @@
+JSP(java standard server)
+ - is used just like the servlet technology but it's easier and have mor functionalities like expression
+language, jstl(JSP standard tag library).
+	ADVANTAGES OF JSP OVER SERVLET
+1.) in JSP implicit objects, expression language, predefined tags and Custom tags in JSP which makes the 
+development easy.
+2.) business logic and presentation logic can be easily seperated unlike in servlet technology which we mix business logic
+with presentation logic.
+3.)Faster in development because we don't need to recompile and redeploy the project. 
+4.) more tags can be used which lessens the code than servlet.
+
+JSTL
+ - a set of tags that simplifies the JSP.
+
+Advantages
+1.) Fast Development
+2.) Code Reusability
+3.)scriptlet tag is not needed.
+
+
+
+reference: https://www.javatpoint.com/jsp-tutorial
+	   https://www.javatpoint.com/jstl
