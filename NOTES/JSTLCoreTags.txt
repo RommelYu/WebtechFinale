@@ -1,0 +1,25 @@
+Expression Language
+ JSP technology version 2.0 supports expression language(EL). EL makes it easy to easily access data application that is stored
+in JavaBeans components. e.g ${name} <- this expression allows an access on a bean using simple syntax.
+JSTL TAGS
+<c:out>
+ -it is similar to a JSP expression tag
+ - c:out can be used only with expression.
+ -displays the result of an expression similar to <%=...%> work.
+	e.g <c:out value="${'Example1'}">
+<c:import>
+ -just like the JSP 'include'.
+ -can include the content of any source wether it's in the server or outside the server.
+ - provides all the functionality of the include action.
+ e.g
+ <c:import var="data" url="http://www.google.com"/>
+
+<c:set>
+ -<c:set> is used to set the result of an expression that is evaluated in a scope.
+ -Similar to jsp:setProperty action tag in JSP.
+ -e.g <c:set var="Income" scope="session" value="${4000*4}"/>
+
+references: https://docs.oracle.com/javaee/1.4/tutorial/doc/JSPIntro7.html
+            https://www.javatpoint.com/jstl-core-out-tag
+	    https://www.javatpoint.com/jstl-core-set-tag
+	    https://www.javatpoint.com/jstl-core-import-tag
