@@ -18,8 +18,13 @@ JSTL TAGS
  -<c:set> is used to set the result of an expression that is evaluated in a scope.
  -Similar to jsp:setProperty action tag in JSP.
  -e.g <c:set var="Income" scope="session" value="${4000*4}"/>
+<c:remove>
+ -<c:remove> is used for removing a variable in a scope tag.
+ - it either remove a specified scope or the first scope.
+ -e.g <c:remove var="income"/>
 
 references: https://docs.oracle.com/javaee/1.4/tutorial/doc/JSPIntro7.html
             https://www.javatpoint.com/jstl-core-out-tag
 	    https://www.javatpoint.com/jstl-core-set-tag
 	    https://www.javatpoint.com/jstl-core-import-tag
+	    https://www.javatpoint.com/jstl-core-remove-tag
