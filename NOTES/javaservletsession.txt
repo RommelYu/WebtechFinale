@@ -1,0 +1,31 @@
+Session in Java Servlet – HttpSession
+Servlet API provides Session management through HttpSession interface. We can get session from HttpServletRequest object using following methods. HttpSession allows us to set objects as attributes that can be retrieved in future requests.
+
+HttpSession getSession()
+- This method always returns a HttpSession object. It returns the session object attached with the request, 
+if the request has no session attached, then it creates a new session and return it.
+
+HttpSession getSession(boolean flag) 
+– This method returns HttpSession object if request has session else it returns null.
+
+Some of the important methods of HttpSession are:
+
+String getId() 
+– Returns a string containing the unique identifier assigned to this session.
+
+Object getAttribute(String name) 
+– Returns the object bound with the specified name in this session, or null if no object is bound under the name. Some other methods to work with Session attributes are getAttributeNames(), removeAttribute(String name) and setAttribute(String name, Object value).
+
+long getCreationTime() 
+– Returns the time when this session was created, measured in milliseconds since midnight January 1, 1970 GMT. We can get last accessed time with getLastAccessedTime() method.
+
+setMaxInactiveInterval(int interval) 
+– Specifies the time, in seconds, between client requests before the servlet container will invalidate this session. We can get session timeout value from getMaxInactiveInterval() method.
+
+ServletContext getServletContext() 
+– Returns ServletContext object for the application.
+
+boolean isNew() 
+– Returns true if the client does not yet know about the session or if the client chooses not to join the session.
+void invalidate() 
+– Invalidates this session then unbinds any objects bound to it.
