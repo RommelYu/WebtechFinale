@@ -1,0 +1,68 @@
+Session support in PHP consists of a way to preserve certain data across subsequent accesses.
+The session support allows you to store data between requests in the $_SESSION superglobal array. 
+When a visitor accesses your site, PHP will check automatically (if session.auto_start is set to 1) 
+or on your request (explicitly through session_start()) whether a specific session id has been sent 
+with the request. If this is the case, the prior saved environment is recreated.
+
+
+PREDEFINED CONSTANTS
+The constants below are defined by this extension, and will only be available when the extension has 
+either been compiled into PHP or dynamically loaded at runtime.
+
+- SID(string)
+Constant containing either the session name and session ID in the form of "name=ID" or empty string if session 
+ID was set in an appropriate session cookie. This is the same id as the one returned by session_id().
+
+- PHP_SESSION_DISABLED (int)
+Since PHP 5.4.0. Return value of session_status() if sessions are disabled.
+
+- PHP_SESSION_NONE (int)
+Since PHP 5.4.0. Return value of session_status() if sessions are enabled, but no session exists.
+
+- PHP_SESSION_ACTIVE (int)
+Since PHP 5.4.0. Return value of session_status() if sessions are enabled, and a session exists.
+
+SESSION FUNCTION
+session_abort — Discard session array changes and finish session
+session_cache_expire — Return current cache expire
+session_cache_limiter — Get and/or set the current cache limiter
+session_commit — Alias of session_write_close
+session_create_id — Create new session id
+session_decode — Decodes session data from a session encoded string
+session_destroy — Destroys all data registered to a session
+session_encode — Encodes the current session data as a session encoded string
+session_gc — Perform session data garbage collection
+session_get_cookie_params — Get the session cookie parameters
+session_id — Get and/or set the current session id
+session_is_registered — Find out whether a global variable is registered in a session
+session_module_name — Get and/or set the current session module
+session_name — Get and/or set the current session name
+session_regenerate_id — Update the current session id with a newly generated one
+session_register_shutdown — Session shutdown function
+session_register — Register one or more global variables with the current session
+session_reset — Re-initialize session array with original values
+session_save_path — Get and/or set the current session save path
+session_set_cookie_params — Set the session cookie parameters
+session_set_save_handler — Sets user-level session storage functions
+session_start — Start new or resume existing session
+session_status — Returns the current session status
+session_unregister — Unregister a global variable from the current session
+session_unset — Free all session variables
+session_write_close — Write session data and end session
+
+
+SESSION HANDLER
+
+SessionHandler is a special class that can be used to expose the current internal PHP 
+session save handler by inheritance. There are seven methods which wrap the seven internal
+session save handler callbacks (open, close, read, write, destroy, gc and create_sid). 
+By default, this class will wrap whatever internal save handler is set as defined by the session.save_handler 
+configuration directive which is usually files by default. Other internal session save handlers are provided by 
+PHP extensions such as SQLite (as sqlite), Memcache (as memcache), and Memcached (as memcached).
+
+
+References:
+http://php.net/manual/en/intro.session.php
+http://php.net/manual/en/session.constants.php
+http://php.net/manual/en/ref.session.php
+http://php.net/manual/en/class.sessionhandler.php
