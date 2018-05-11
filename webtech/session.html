@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>WebTech 2018</title>
+	  <link rel="icon" href="IMG/session.png">
+  </head>
+  <body>
+	<section>
+		<h2>What is Session?</h2>
+		<p> Session support in PHP consists of a way to preserve certain data across subsequent accesses.
+The session support allows you to store data between requests in the $_SESSION superglobal array. 
+When a visitor accesses your site, PHP will check automatically (if session.auto_start is set to 1) 
+or on your request (explicitly through session_start()) whether a specific session id has been sent 
+with the request. If this is the case, the prior saved environment is recreated. </p>
+
+	</section>
+	<section>
+		<h2>Session Function</h2>
+		<li>session_abort — Discard session array changes and finish session</li>
+		<li>session_cache_limiter — Get and/or set the current cache limiter</li>
+		<li>session_commit — Alias of session_write_close</li>
+		<li>session_create_id — Create new session id</li>
+		<li>session_destroy — Destroys all data registered to a session</li>
+		<li>session_encode — Encodes the current session data as a session encoded string</li>
+		<li>session_gc — Perform session data garbage collection</li>
+		<li>session_get_cookie_params — Get the session cookie parameters</li>
+		<li>session_id — Get and/or set the current session id</li>
+		<li>session_is_registered — Find out whether a global variable is registered in a session</li>
+		<li>session_module_name — Get and/or set the current session module</li>
+		<li>session_name — Get and/or set the current session name</li>
+		<li>session_regenerate_id — Update the current session id with a newly generated one</li>
+		<li>session_register_shutdown — Session shutdown function</li>
+		<li>session_register — Register one or more global variables with the current session</li>
+		<li>session_reset — Re-initialize session array with original values</li>
+		<li>session_save_path — Get and/or set the current session save path</li>
+		<li>session_set_cookie_params — Set the session cookie parameters</li>
+		<li>session_set_save_handler — Sets user-level session storage functions</li>
+		<li>session_start — Start new or resume existing session</li>
+		<li>session_status — Returns the current session status</li>
+		<li>session_unregister — Unregister a global variable from the current session</li>
+	</section>
+    
+ <section>
+   <h2>Session Handler</h2>
+		<p> SessionHandler is a special class that can be used to expose the current internal PHP 
+session save handler by inheritance. There are seven methods which wrap the seven internal
+session save handler callbacks (open, close, read, write, destroy, gc and create_sid). 
+By default, this class will wrap whatever internal save handler is set as defined by the session.save_handler 
+configuration directive which is usually files by default. Other internal session save handlers are provided by 
+PHP extensions such as SQLite (as sqlite), Memcache (as memcache), and Memcached (as memcached). </p>
+	  </section>
+    
+    <section> 
+    <h2> Session in Java Servlet – HttpSession </h2>
+		<p> Servlet API provides Session management through HttpSession interface. We can get session from HttpServletRequest object using following methods. HttpSession allows us to set objects as attributes that can be retrieved in future requests.</p>
+   		<li><b>HttpSession getSession()</b> —This method always returns a HttpSession object. It returns the session object attached with the request, if the request has no session attached, then it creates a new session and return it. </li>
+		<li><b>HttpSession getSession(boolean flag) </b>— This method returns HttpSession object if request has session else it returns null.</li> <br>
+		<p>Some of the important methods of HttpSession are: </p>
+		<li>String getId() — Returns the object bound with the specified name in this session, or null if no object is bound under the name.</li>
+		<li>Object getAttribute(String name)  — Returns the object bound with the specified name in this session, or null if no object is bound under the name. </li>
+		<li>long getCreationTime() — Returns the time when this session was created, measured in milliseconds since midnight January 1, 1970 GMT. We can get last accessed tim	e with getLastAccessedTime() method. </li>
+		<li>setMaxInactiveInterval(int interval)  — Specifies the time, in seconds, between client requests before the servlet container will invalidate this session. We can get session timeout value from getMaxInactiveInterval() method.</li>
+		<li>ServletContext getServletContext() — Returns ServletContext object for the application.</li>
+		<li>boolean isNew() — Returns true if the client does not yet know about the session or if the client chooses not to join the session.</li>
+		<li>void invalidate() — Invalidates this session then unbinds any objects bound to it.</li>
+	</section>	
+
+	  <section>
+		<h2>What is Cookie?</h2>
+		<p>A cookie is often used to identify a user. A cookie is a small file that the server embeds on the user's computer. Each time the same computer requests a page with a browser, it will send the cookie too. With PHP, you can both create and retrieve cookie values. Cookies are a mechanism for storing data in the remote browser and thus tracking or identifying return users. You can set cookies using the setcookie() or setrawcookie() function. Cookies are part of the HTTP header, so setcookie() must be called before any output is sent to the browser. This is the same limitation that header() has. You can use the output buffering functions to delay the script output until you have decided whether or not to set any cookies or send any headers.</p>
+	</section>
+	  <section>
+		<h2>What are Session Cookies?</h2>
+		<p>Session Cookies are small text files given by a server in which it would enable the server to remember the client who requested a request.
+		The idea behind session and cookies is this: (Assuming a client has a login credentials to a certain website) When a client logins in to a website, the server would first ask for a cookie from the user agent when it finds a cookie the server would now establish a session between the the server and the client which would now enable the server to remember all the transactions the client would make.   </p>
+	</section>
+	  <section>
+		<h2>How do Session Cookies work?</h2>
+		<p>The session id is sent to the user when his session is created. it is stored in a cookie, that cookie is sent by the browser to the server with each request. the server (PHP) uses that cookie, containing the session_id, to know which file corresponds to that user.</p>
+	</section>
+	
+  </body>
+</html>
