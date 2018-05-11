@@ -17,13 +17,13 @@ mysqli_select_db($conn, $database) or die("Connection Failed");
 if(isset($_POST['submit'])){
 $firstname = $_POST['firstname'];
 $lastname = $_POST['lastname'];
-$email = $_POST['email'];
+$username = $_POST['username'];
 $password = $_POST['pass'];
 $confirm = $_POST['confirm'];
 
 if ($_POST["pass"] == $_POST["confirm"]) {
 
-  $query = "INSERT INTO users (`firstname`, `lastname`, `email`,  `password`) VALUES('$firstname', '$lastname', '$email', '$password')";
+  $query = "INSERT INTO accounts (`firstname`, `lastname`, `username`,  `password`) VALUES('$firstname', '$lastname', '$username', '$password')";
 
   $sql = mysqli_query($conn,$query);
 
@@ -151,7 +151,7 @@ xmlhttp.send();
     
             } else{
 
-                    echo "<div class = 'contentfs'>
+                    echo "<div class = 'content'>
 
                             <div> 
 
