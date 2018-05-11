@@ -63,9 +63,10 @@
 <!-- Questions starts here -->          
         
   <div class="col-md-10 col-md-offset-1">
+      <form action="score.php" method="post" id="quiz">
   <li>
 
-    <h3>Node.js is an open source and cross-platform runtime environment for executing JavaScript code _____ of a browser. The client can store data, send emails, push notifications to the server. (2 points)</h3>
+    <h3>Node.js is an open source and cross-platform runtime environment for executing JavaScript code _____ of a browser. The client can store data, send emails, push notifications to the server.</h3>
     
     <div>
         <input type="radio" name="question-1-answers" id="question-1-answers-A" value="A" />
@@ -93,54 +94,26 @@
   <div class="col-md-10 col-md-offset-1">
   <li>
 
-    <h3>Node is an ______ by default so in a single thread it can handle multiple requests from the client. (2 points)</h3>
+    <h3>Node is an ______ by default so in a single thread it can handle multiple requests from the client.</h3>
     
     <div>
-        <input type="radio" name="question-1-answers" id="question-1-answers-A" value="A" />
-        <label for="question-1-answers-A">A) Synchronous </label>
+        <input type="radio" name="question-2-answers" id="question-2-answers-A" value="A" />
+        <label for="question-2-answers-A">A) Synchronous </label>
     </div>
     
     <div>
-        <input type="radio" name="question-1-answers" id="question-1-answers-B" value="B" />
-        <label for="question-1-answers-B" name="correct">B) Asynchronous</label>
+        <input type="radio" name="question-2-answers" id="question-2-answers-B" value="B" />
+        <label for="question-2-answers-B" name="correct">B) Asynchronous</label>
     </div>
     
     <div>
-        <input type="radio" name="question-1-answers" id="question-1-answers-C" value="C" />
-        <label for="question-1-answers-C">C) Both A and B </label>
+        <input type="radio" name="question-2-answers" id="question-2-answers-C" value="C" />
+        <label for="question-2-answers-C">C) Both A and B </label>
     </div>
     
     <div>
-        <input type="radio" name="question-1-answers" id="question-1-answers-D" value="D" />
-        <label for="question-1-answers-D">D) None of the above</label>
-    </div>
-
-  </li>
-  </div>
-
-  <div class="col-md-10 col-md-offset-1">
-  <li>
-
-    <h3>Node.js was originally written by ______ in 2009, about thirteen years after the introduction of the first server-side JavaScript environment, Netscape's LiveWire Pro Web. (2 points)</h3>
-    
-    <div>
-        <input type="radio" name="question-1-answers" id="question-1-answers-A" value="A" />
-        <label for="question-1-answers-A" name="answer">A) Ryan Dahl </label>
-    </div>
-    
-    <div>
-        <input type="radio" name="question-1-answers" id="question-1-answers-B" value="B" />
-        <label for="question-1-answers-B">B) Ryan Dale </label>
-    </div>
-    
-    <div>
-        <input type="radio" name="question-1-answers" id="question-1-answers-C" value="C" />
-        <label for="question-1-answers-C">C) Ryan Dull </label>
-    </div>
-    
-    <div>
-        <input type="radio" name="question-1-answers" id="question-1-answers-D" value="D" />
-        <label for="question-1-answers-D">D) None of the above</label>
+        <input type="radio" name="question-2-answers" id="question-2-answers-D" value="D" />
+        <label for="question-2-answers-D">D) None of the above</label>
     </div>
 
   </li>
@@ -149,26 +122,54 @@
   <div class="col-md-10 col-md-offset-1">
   <li>
 
-    <h3>Node.js allows the creation of Web servers and networking tools using ______ and a collection of "modules" that handle various core functionality. (2 points)</h3>
+    <h3>Node.js was originally written by ______ in 2009, about thirteen years after the introduction of the first server-side JavaScript environment, Netscape's LiveWire Pro Web.</h3>
     
     <div>
-        <input type="radio" name="question-1-answers" id="question-1-answers-A" value="A" />
-        <label for="question-1-answers-A" name="answer">A) Javascript </label>
+        <input type="radio" name="question-3-answers" id="question-3-answers-A" value="A" />
+        <label for="question-3-answers-A" name="answer">A) Ryan Dahl </label>
     </div>
     
     <div>
-        <input type="radio" name="question-1-answers" id="question-1-answers-B" value="B" />
-        <label for="question-1-answers-B">B) CSS</label>
+        <input type="radio" name="question-3-answers" id="question-3-answers-B" value="B" />
+        <label for="question-3-answers-B">B) Ryan Dale </label>
     </div>
     
     <div>
-        <input type="radio" name="question-1-answers" id="question-1-answers-C" value="C" />
-        <label for="question-1-answers-C">C) HTML</label>
+        <input type="radio" name="question-3-answers" id="question-3-answers-C" value="C" />
+        <label for="question-3-answers-C">C) Ryan Dull </label>
     </div>
     
     <div>
-        <input type="radio" name="question-1-answers" id="question-1-answers-D" value="D" />
-        <label for="question-1-answers-D">D) PHP </label>
+        <input type="radio" name="question-3-answers" id="question-3-answers-D" value="D" />
+        <label for="question-3-answers-D">D) None of the above</label>
+    </div>
+
+  </li>
+  </div>
+
+  <div class="col-md-10 col-md-offset-1">
+  <li>
+
+    <h3>Node.js allows the creation of Web servers and networking tools using ______ and a collection of "modules" that handle various core functionality.</h3>
+    
+    <div>
+        <input type="radio" name="question-4-answers" id="question-4-answers-A" value="A" />
+        <label for="question-4-answers-A" name="answer">A) Javascript </label>
+    </div>
+    
+    <div>
+        <input type="radio" name="question-4-answers" id="question-4-answers-B" value="B" />
+        <label for="question-4-answers-B">B) CSS</label>
+    </div>
+    
+    <div>
+        <input type="radio" name="question-4-answers" id="question-4-answers-C" value="C" />
+        <label for="question-4-answers-C">C) HTML</label>
+    </div>
+    
+    <div>
+        <input type="radio" name="question-4-answers" id="question-4-answers-D" value="D" />
+        <label for="question-4-answers-D">D) PHP </label>
     </div>
 
   </li>
@@ -177,52 +178,50 @@
   <div class="col-md-10 col-md-offset-1">
   <li>
 
-    <h3>Since node applications are ______ threaded when performing the calculations to serve one client, other clients have to wait and that's why node should not be used for CPU intensive applications. (2 points)</h3>
+    <h3>Since node applications are ______ threaded when performing the calculations to serve one client, other clients have to wait and that's why nod4 should not be used for CPU intensive applications.</h3>
     
     <div>
-        <input type="radio" name="question-1-answers" id="question-1-answers-A" value="A" />
-        <label for="question-1-answers-A">A) Single </label>
+        <input type="radio" name="question-5-answers" id="question-5-answers-A" value="A" />
+        <label for="question-5-answers-A">A) Single </label4
     </div>
     
     <div>
-        <input type="radio" name="question-1-answers" id="question-1-answers-B" value="B" />
-        <label for="question-1-answers-B">B) Double</label>
+        <input type="radio" name="question-5-answers" id="question-5-answers-B" value="B" />
+        <label 4or="question-5-answers-B">B) Double</label>
     </div>
     
     <div>
-        <input type="radio" name="question-1-answers" id="question-1-answers-C" value="C" />
-        <label for="question-1-answers-C">C) Multi </label>
+        <input type="radio" name="question-5-answers" id="question-5-answers-C" value="C" />
+        <label 4or="question-5-answers-C">C) Multi </label>
     </div>
     
     <div>
-        <input type="radio" name="question-1-answers" id="question-1-answers-D" value="D" />
-        <label for="question-1-answers-D">D) None of the above</label>
+        <input type="radio" name="question-5-answers" id="question-5-answers-D" value="D" />
+        <label for="question-5-answers-D">D) None of the above</label>
         <br><br><br>
     </div>
 
   </li>
+        <input type="submit" value="Submit Quiz"> SUBMIT ANSWER </input> 
+	          </form>
   </div>
-          
-          
-  <button type="button"> SUBMIT ANSWER </button>
-          
           
           
       </div>
     </div>
   </div>
 </section>
-  <!--/about-us-->
+  <!--/ab5ut-us-->
 
   <footer>
     <div class="container">
       <div class="col-md-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
         <h4>About Us</h4>
-        <p>This page is meant for educational purposes for the School of Computing and Information Sciences, Web Systems and Technologies, 2nd Semester SY 2017-2018</p>
+        <5>This page is meant for educational purposes for the School of Computing and Information Sciences, Web Systems and Technologies, 2nd Semester SY 2017-2018</p>
       </div>
 
       <div class="col-md-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
-        <div class="text-center">
+        <5iv class="text-center">
             <br>
             <br>
             <h4>COPYRIGHT - WEBTECH LECTURE 2018</h4>
