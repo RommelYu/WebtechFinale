@@ -19,15 +19,47 @@
     <p>Can be used or accessed anywhere in the script</p>
     <p>here are the superglobal variables:</p>
     <ul>
-        <li>$GLOBALS</li>
-        <li>$_SERVER</li>
-        <li>$_REQUEST</li>
-        <li>$_POST</li>
-        <li>$_GET</li>
-        <li>$_FILES</li>
-        <li>$_ENV</li>
-        <li>$_COOKIE</li>
-        <li>$_SESSION</li>
+        <li>$GLOBALS
+		<p>This is a PHP super global variable which is used to access global variables from anywhere in the PHP
+                    script (also from within functions or methods).</p>
+		</li>
+        <li>$_SERVER
+		<p>This is a PHP super global variable which holds information about headers, paths, and script
+                    locations.</p>
+        </li>
+		<li>$_REQUEST
+		<p>This is used to collect data after submitting an HTML form</p>
+		</li>
+        <li>$_POST
+		<p>This is widely used to collect form data after submitting an HTML form with method="post". $_POST is
+                    also widely used to pass variables.</p>
+		</li>
+        <li>$_GET
+		<p>This can also be used to collect form data after submitting an HTML form with method="get".</p>
+		</li>
+        <li>$_FILES
+		<p>An associative array of items uploaded to the current script via the HTTP POST method.
+                    The structure of this array is outlined in the POST method uploads section.</p>
+		</li>
+        <li>$_ENV
+		<p>These variables are imported into PHP's global namespace from the environment under which the PHP
+                    parser is running.
+                    Many are provided by the shell under which PHP is running and different systems are likely running
+                    different kinds of shells,
+                    a definitive list is impossible.</p>
+		</li>
+        <li>$_COOKIE
+		<p>PHP transparently supports HTTP cookies.
+                    Cookies are a mechanism for storing data in the remote browser and thus tracking or identifying
+                    return users.
+                </p>
+		</li>
+        <li>$_SESSION
+		<p>Sessions are a simple way to store data for individual users against a unique session ID.
+                    This can be used to persist state information between page requests.
+                    Session IDs are normally sent to the browser via session cookies and the ID is used to retrieve
+                    existing session data.</p>
+		</li>
     </ul>
 </section>
 
