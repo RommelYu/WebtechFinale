@@ -1,0 +1,449 @@
+AJAX SAMPLE CODES:
+
+creating a XMLHttpRequest object
+Syntax: 
+var obj = new XMLHttpRequest();
+
+XMLHttpRequest Object Methods
+AJAX REQUEST
+
+
+this is a get request that uses open(specifies the request) method. "GET" is the request type, "name.asp" is the url or file location, and true is for asynchronous
+or false for synchronous. you can add a user and password but it is optional. the send() method sends the request to the server and is used for GET requests while send(string) is used
+for POST requests. the difference between GET and POST is that Get is faster, simpler and can be used in most cases, but in case of  
+
+obj.open("GET", "name.asp", true);
+obj.send();
+
+To avoid getting cached result, add a unique ID to the URL.
+
+obj.open("GET", "name.aspt=" + Math.random(), true);
+obj.send();
+if you want to send information with the get method, you can add the information to the url
+obj.open("GET", "name.asp?fname=Bogart&idnum=2104325", true);
+obj.send();
+
+
+obj.open("POST"), "name.asp", true);
+obj.send();
+
+to POST data like an html form, it is needed to add a HTTP header with setRequestHeader(), then specify the information you want to send.
+
+obj.open("POST"), "name.asp", true);
+obj.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+obj.send("fname=Bogart&idnum=2104325");
+obj.send();
+
+AJAX SERVER RESPONSE
+
+-readyState - A property that holds the status of the XMLHttpRequest.
+-OnReadyStateChange - A property that defines a function to be executed when the readyState changes.
+0: request not initialized 
+1: server connection established
+2: request received 
+3: processing request 
+4: request finished and response is ready
+-status/statusText - A property that holds status of XMLHttpRequest object. HTTP Status Messages. e.g(200 "OK", 202 "Accepted")
+
+OnReadyStateChange
+When readyState changes OnReadyStateChange function is called.
+
+function loadDoc() {
+    var obj = new XMLHttpRequest();
+    obj.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 202) {
+            document.getElementById("demo").innerHTML =
+            this.responseText;
+       }
+    };
+    obj.open("GET", "ajax_info.txt", true);
+    obj.send(); 
+}
+
+
+Callback Function
+ - A function that is passed to another function as a parameter.
+ - it is used when you have more than one task in your website. a function for executing
+the XMLHttpRequest and a Callback function for each AJAX tasks.
+
+loadDoc("url-1", myFunction1);
+
+loadDoc("url-2", myFunction2);
+
+function loadDoc(url, cFunction) {
+  var obj;
+  obj=new XMLHttpRequest();
+  obj.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 202) {
+      cFunction(this);
+    }
+ };
+  obj.open("GET", url, true);
+  obj.send();
+}
+
+function myFunction1(obj) {
+  
+} 
+function myFunction2(obj) {
+
+}
+Response Text Property 
+ - returns the server response as a string and can be used correspondingly.
+
+document.getElementById("demo").innerHTML = obj.responseText;
+
+responseXML
+ - a property that returns the server response as an XML DOM object.
+ - you can parse the response as an XML DOM Object using this property.
+//this requests  the AdventureBooks.xml and parse it as an XML DOM object.
+xmlDoc = obj.responseXML;
+txt = "";
+x = xmlDoc.getElementsByTagName("");
+for (i = 0; i < x.length; i++) {
+  txt += x[i].childNodes[0].nodeValue + "<br>";
+  }
+document.getElementById("demo").innerHTML = txt;
+xhttp.open("GET", "AdventureBooks.xml", true); 
+xhttp.send();
+
+
+getAllResponseHeaders()
+-returns all header information from the server response.
+
+var obj = new XMLHttpRequest();
+obj.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 202) {
+    document.getElementById("").innerHTML =
+    this.getAllResponseHeaders();
+  }
+};
+
+getResponseHeader() 
+-returns header information from the server response.
+var obj = new XMLHttpRequest();
+obj.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 202) {
+    document.getElementById("demo").innerHTML =
+    this.getResponseHeader("Last-Modified");
+  }
+};
+obj.open("GET", "sample.txt", true);
+obj.send();
+
+PHP
+Creating a variable
+to declare a variable first type the dollar($) sign following it with the variable name along with the value.
+<?php
+$name= "Miguel";
+$MidtermGrade = 65;
+$Average = 65.3;
+?>
+
+Echo and Print 
+Echo and Print is used to output the data on the screen. echo has no return value while print has a return value so that it can be used in expressions.
+<?php
+echo "<h2>Hello World!</h2>";
+echo "Hello Universe!<br>";
+echo "This ", "string ", "was ", "made ", "with multiple parameters.";
+?>
+//display variables
+<?php
+$name= "Miguel";
+$midtermGrade = 65;
+$Average = 65.3;
+
+echo "NAME:" . $name . "<br>";
+echo "Midterm Grade:" . $midtermGrade . "<br>"; 
+?>
+
+//print example
+<?php
+print "Hello world!<br>";
+print "Hello Universe!";
+?>
+
+
+<?php
+$name= "Miguel";
+$midtermGrade = 65;
+$Average = 65.3;
+
+print "NAME:" . $name . "<br>";
+print "Midterm Grade:" . $midtermGrade; 
+?>
+
+PHP constants
+constant is an identifier for a value. this value cannot be changed during the script.
+example
+<?php
+define("hello", "hello world");
+echo hello;
+?>
+
+PHP conditional statements
+if statement
+<?php
+$name ="miguel";
+$grade = 95;
+
+if ($name == "miguel") {
+    echo "your grade is" . $grade . "<br>";
+}
+?>
+
+if else statement
+if ($name == "miguel") {
+    echo "your grade is" . $grade . "<br>";
+}else
+    echo "you're not miguel";
+?>
+
+if elseif else statement
+if else statement
+if ($name < "miguel") {
+    echo "your grade is" . $grade . "<br>";
+}elseif ($name != "miguel") {
+    echo "you're not miguel";
+}else 
+    echo "hello world";
+
+?>
+
+php switch case
+it is used for performing different cases on different conditions.
+<?php
+$laptopBrand = "asus";
+
+switch ($laptopBrand) {
+    case "asus":
+        echo "Your laptop brand is Asus.";
+        break;
+    case "samsung":
+        echo "Your laptop brand is Samsung.";
+        break;
+    default:
+        echo "Your laptop is not Samsung or Asus.";
+}
+?>
+
+php loops 
+while loop
+<?php 
+$num = 0; 
+while($num <= 3) {
+    echo "number: $num <br>";
+    $num++;
+} 
+?>
+
+do while loop
+<?php 
+$num = 0; 
+do {
+    echo "number: $num <br>";
+    $num++;
+} while ($num <= 3);
+?>
+
+
+php for loop
+<?php 
+for ($num = 0; $num <= 3; $x++) {
+    echo "number: $num <br>";
+} 
+?>
+
+foreach loop
+<?php 
+$num = array("0", "1", "2", "3"); 
+
+foreach ($num as $digits) {
+    echo "$digits <br>";
+}
+?>
+
+php user defined function
+create a user defined function sample code.
+<?php
+function helloWorld() {
+    echo "Hello universe.";
+}
+helloWorld(); //function is called.
+?>
+
+<?php
+function introduce($fName, $lName){
+   echo "My name is $fname $lName";
+}
+introduce(Pedro, Penduko);
+introduce(bogart, cruz);
+?>
+
+returning values
+<?php
+function diff($a, $b) {
+    $c = $a - $b;
+    return $c;
+}
+
+echo "3 - 2 = " . diff(3, 2) . "<br>";
+echo "5 + 3 = " . diff(5, 3);
+?>
+Default argument val.
+<?php
+function km($minkm = 2) {
+ 5986   echo "The height is : $minheight <br>";
+}
+
+
+km(); // the value is 2 because we set the default value to 2.
+km(350);
+?>
+
+array
+creating an array
+<?php
+$name = array("bogart", "kora", "pedro");
+?>
+
+mannualy assigned index
+$name[0] = "bogart";
+$name[1] = "kora";
+$name[2] = "pedro";
+
+sorting an array
+ascending order
+<?php
+$name = array("bogart", "kora", "pedro");
+sort($name);
+?>
+
+descending order
+$name = array("bogart", "kora", "pedro");
+rsort($name);
+?>
+
+according to value.
+$name = array("bogart", "kora", "pedro");
+asort($name);
+?>
+ php super globals
+
+$GLOBALS
+this superglobal property can access function in any part.
+<?php 
+$a = 3; 
+$b = 2;
+ 
+function add() { 
+    $GLOBALS['c'] = $GLOBALS['a'] + $GLOBALS['b']; 
+}
+ 
+add(); 
+echo $c; 
+?>
+
+PHP $_SERVER
+this superglobal holds the information about headers, paths and scripts
+<?php 
+echo $_SERVER['PHP_SELF'];
+echo "<br>";
+echo $_SERVER['SCRIPT_NAME'];
+echo "<br>";
+echo $_SERVER['SERVER_NAME'];
+echo "<br>";
+echo $_SERVER['HTTP_REFERER'];
+echo "<br>";
+echo $_SERVER['HTTP_HOST'];
+echo "<br>";
+echo $_SERVER['HTTP_USER_AGENT'];
+
+
+?>
+PHP $_REQUEST
+this superglobal collects data from a form that is submitted.
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // collect value of fname.
+    $name = $_REQUEST['fname'];
+    if (empty($name)) {
+        echo "Name is empty";
+    } else {
+        echo $name;
+    }
+}
+?>
+
+PHP $_POST is used to collect form data AFTER submitting an html form. it is also used to pass variables.
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // collect value of input field
+    $name = $_POST['fname'];
+    if (empty($name)) {
+        echo "Name is empty";
+    } else {
+        echo $name;
+    }
+}
+?>
+
+PHP $_GET
+is also used to collect form data after submitting an html form with the method "get".
+<?php 
+echo "Study " . $_GET['subject'] . " at " . $_GET['web'];
+?>
+
+Nodes.js
+
+Modules sample code
+include a module
+
+Require() method
+used to include an http module
+var http = require('http');
+
+create a server
+http.createServer(function (req, res) {
+    res.writeHead(200, {'Content-Type': 'text/html'});
+    res.end('Hello World!');
+}).listen(8080);
+
+creating your own module
+exports.myDateTime = function () {
+    return Date();
+};
+including your own module
+var http = require('http');
+var dt = require('./myfirstmodule');
+
+http.createServer(function (req, res) {
+    res.writeHead(200, {'Content-Type': 'text/html'});
+    res.write("The date and time are currently: " + dt.myDateTime());
+    res.end();
+}).listen(8080);
+
+
+
+
+
+
+
+
+references: https://www.w3schools.com/tags/ref_httpmessages.asp
+	    https://www.w3schools.com/xml/ajax_xmlhttprequest_send.asp
+	    https://www.w3schools.com/xml/ajax_xmlhttprequest_response.asp
+	    https://www.w3schools.com/php/php_variables.asp
+	    https://www.w3schools.com/php/php_echo_print.asp
+	    https://www.w3schools.com/php/php_switch.asp
+	    https://www.w3schools.com/php/php_if_else.asp
+	    https://www.w3schools.com/php/php_constants.asp
+	    https://www.w3schools.com/php/php_looping.asp
+	    https://www.w3schools.com/php/php_looping_for.asp
+	    https://www.w3schools.com/php/php_functions.asp
+	    https://www.w3schools.com/php/php_arrays.asp
+	    https://www.w3schools.com/php/php_arrays_sort.asp
+	    https://www.w3schools.com/php/php_superglobals.asp
+	    https://www.w3schools.com/nodejs/nodejs_modules.asp
+
+
