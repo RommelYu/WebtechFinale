@@ -1,0 +1,70 @@
+ <!DOCTYPE html>
+<html lang="en">
+ <head>
+
+	  <link rel="icon" href="IMG/node.png">
+<title>WebTech 2018</title>
+</head>
+ <body>
+	
+	<section>
+		<h2>What is Node.js</h2>
+		<p>Node.js is an open source and cross-platform runtime environment for executing JavaScript code outside of a browser. The client can store data, send emails, push notifications to the server. It builds highly scalable data and real time backend services. It is runtime environment for executing JavaScript code. Node.js allows the creation of Web servers and networking tools using JavaScript and a collection of "modules" that handle various core functionality. Node is an asynchronous by default so in a single thread it can handle multiple requests from the client.</p>
+		<p> Node.js was originally written by Ryan Dahl in 2009, about thirteen years after the introduction of the first server-side JavaScript environment, Netscape's LiveWire Pro Web. The initial release supported only Linux and Mac OS X. Its development and maintenance was led by Dahl and later sponsored by Joyent. Node.js is a very powerful JavaScript-based framework/platform built on Google Chrome's JavaScript V8 Engine. It is used to develop I/O intensive web applications like video streaming sites, single-page applications, and other web applications. </p>		
+		<p>The node can serve more clients without the need for more hardware. But node should not be used for CPU intensive applications like a video encoding or an image manipulation service. </p>
+	 </section>
+	 
+	 <section>
+		<h2>Nodes Features</h2>
+		<p><b>Asynchronous and Event Driven</b> - All APIs of Node.js library are asynchronous, that is, non-blocking. It essentially means a Node.js based server never waits for an API to return data. </p>
+		<p><b>No Buffering</b> - Node.js applications never buffer any data. These applications simply output the data in chunks.</p>
+		<p><b>Single Threaded but Highly Scalable</b> - Node.js uses a single threaded model with event looping. Node.js uses a single threaded program and the same program can provide service to a much larger number of requests than traditional servers like Apache HTTP Server.</p>
+		<p><b>Very Fast</b> - Being built on Google Chrome's V8 JavaScript Engine, Node.js library is very fast in code execution. </p>
+	 </section>
+	 
+	<section>
+		<h2>Node.js Libraries</h2>
+		<p>Node.js libraries are divided into modules (a module is a standalong JS file). </p>
+		<p>Node.js Core Library - it is consists of predefined modules that a developer can use without having to download the module before requiring it in a Node.js file. One module that is in the core library of Node.js is HTTP and to include HTTP in your file you could do: var http = require('http');
+		</p>
+		<p>Modules not included in the Core Library - To install modules that are not included in the Core Library you could type <kbd>npm install [name of module]</kbd>. An example is the mysql module which is not in the core library of Node.js</p>
+		<p>Some modules to consider - Node.js also has modules that acts as a framework, an example is the Express framework which is a backend framework which facilitates difficult things (HTTP requests, responds and many more) and it is complimentary with pug(also known as Jade) which is also a Node.js module that is influenced by Haml, what pug does is that it generates html code with its own syntax.</p>
+	</section>
+	<h2>Node.js sample code</h2>
+	<h3>Modules</h3>
+	Used to include an HTTP module. Require() method.
+	<h4>Example 1: <img src="IMG/nodejs1.png" height="60" width="300"></h4>
+	
+	<h3>Create a server</h3>
+	<h4>Example 2: <img src="IMG/nodejs2.png" height="70" width="450"></h4>
+	
+	<h3>Creating your own module</h3>
+	<h4>Example 3: <img src="IMG/nodejs3.png" height="70" width="450"></h4>
+	
+	<h3>Including your own module</h3>
+	<h4>Example 4: <img src="IMG/nodejs4.png" height="150" width="450"></h4>
+	<h3>add an HTML header</h3>
+	It is used if the response of the server will be displayed as HTML.
+	<h4>Example 5: <img src="IMG/nodejs5.png" height="150" width="450"></h4>
+	
+	<h3>To include a fileserver we also use Require();</h3>
+	<h4>Example 6: <img src="IMG/nodejs6.png" height="200" width="450"></h4>
+	
+	<h3>To create a new file we use appendFile() method.</h3>
+	<h4>Example 7: <img src="IMG/nodejs7.png" height="150" width="450"></h4>
+	
+	<h3>To create a new empty file, open() method can be used.</h3>
+	<h4>Example 8: <img src="IMG/nodejs8.png" height="150" width="450"></h4>
+	
+	<h3>To replace a file and its content, we can use the writeFile() method.</h3>
+	<h4>Example 9: <img src="IMG/nodejs9.png" height="150" width="450"></h4>
+	<h3>To delete a file, we use fs.unlink() method.</h3>
+	<h4>Example 10: <img src="IMG/nodejs10.png" height="150" width="450"></h4>
+	
+	<h3>To rename a file, we used rename() method.</h3>
+	<h4>Example 11: <img src="IMG/nodejs11.png" height="150" width="450"></h4>
+	<section>
+		
+	</section>
+  </body>
+</html>
