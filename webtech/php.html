@@ -1,10 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-	  
-    <title>Webtech 2018</title>
-	  	  <link rel="icon" href="IMG/php.png">
-  </head>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Day - HTML Bootstrap Template</title>
+
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link href="css/animate.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- =======================================================
+    Theme Name: Day
+    Theme URL: https://bootstrapmade.com/day-multipurpose-html-template-for-free/
+    Author: BootstrapMade
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+
+<body>
+  <header id="header">
+    <nav class="navbar navbar-default navbar-static-top" role="banner">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+          <div class="navbar-brand">
+            <a href="index.html"><h1>WEB SYSTEMS AND TECHNOLOGIES</h1></a>
+          </div>
+        </div>
+        <div class="navbar-collapse collapse">
+          <div class="menu">
+            <ul class="nav nav-tabs" role="tablist">
+              <li role="presentation"><a href="index.html">Home</a></li>
+              <li role="presentation"><a href="services.html" class="active">Final Notes</a></li>
+              <li role="presentation"><a href="exercise.html">Excercise</a></li>
+              <li role="presentation"><a href="aboutus.html">About Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--/.container-->
+    </nav>
+    <!--/nav-->
+  </header>
 
   <body>
 	<h2>What is PHP?</h2>
@@ -18,131 +65,71 @@
     <h2>Super Global Variables</h2>
     <p>Can be used or accessed anywhere in the script</p>
     <p>here are the superglobal variables:</p>
-    <ul>
-        <li>$GLOBALS
-		<p>This is a PHP super global variable which is used to access global variables from anywhere in the PHP
-                    script (also from within functions or methods).</p>
-		</li>
-        <li>$_SERVER
-		<p>This is a PHP super global variable which holds information about headers, paths, and script
-                    locations.</p>
-        </li>
-		<li>$_REQUEST
-		<p>This is used to collect data after submitting an HTML form</p>
-		</li>
-        <li>$_POST
-		<p>This is widely used to collect form data after submitting an HTML form with method="post". $_POST is
-                    also widely used to pass variables.</p>
-		</li>
-        <li>$_GET
-		<p>This can also be used to collect form data after submitting an HTML form with method="get".</p>
-		</li>
-        <li>$_FILES
-		<p>An associative array of items uploaded to the current script via the HTTP POST method.
-                    The structure of this array is outlined in the POST method uploads section.</p>
-		</li>
-        <li>$_ENV
-		<p>These variables are imported into PHP's global namespace from the environment under which the PHP
-                    parser is running.
-                    Many are provided by the shell under which PHP is running and different systems are likely running
-                    different kinds of shells,
-                    a definitive list is impossible.</p>
-		</li>
-        <li>$_COOKIE
-		<p>PHP transparently supports HTTP cookies.
-                    Cookies are a mechanism for storing data in the remote browser and thus tracking or identifying
-                    return users.
-                </p>
-		</li>
-        <li>$_SESSION
-		<p>Sessions are a simple way to store data for individual users against a unique session ID.
-                    This can be used to persist state information between page requests.
-                    Session IDs are normally sent to the browser via session cookies and the ID is used to retrieve
-                    existing session data.</p>
-		</li>
-    </ul>
+    <p>$_GLOBALS
+        <p>$_SERVER</p>
+        <p>$_REQUEST</p>
+        <p>$_POST</p>
+        <p>$_GET</p>
+       <p>$_FILES</p>
+        <p>$_ENV</p>
+        <p>$_COOKIE</p>
+        <p>$_SESSION</p>
 </section>
 
 <section>
     <h2>PHP Session Functions</h2>
-    <dl>
-        <dt>session_abort</dt>
-        <dd>it will disregard the array changes and finishes the session.</dd>
+    
+        <p>1. session_abort - it will disregard the array changes and finishes the session.</p>
 
-        <dt>session_cache_expire</dt>
-        <dd>it will return the current cache expire</dd>
+        <p>2. session_cache_expire - it will return the current cache expire</p>
 
-        <dt>session_cache_limiter </dt>
-        <dd>it will either get and/or set the current cache limiter</dd>
+        <p>3. session_cache_limiter - it will either get and/or set the current cache limiter</p>
 
-        <dt>session_commit</dt>
-        <dd>It is the alias of session_write_close</dd>
+        <p>4. session_commit - It is the alias of session_write_close</p>
         
-        <dt>session_create_id</dt>
-        <dd>it will create a new session id</dd>
+        <p>5. session_create_id - it will create a new session id</p>
 
-        <dt>session_decode </dt>
-        <dd>it will decode the session data from a session encoded string</dd>
+        <p>6. session_decode - it will decode the session data from a session encoded string</p>
 
-        <dt>session_destroy </dt>
-        <dd>it will destroy all data which is registered to a specific session</dd>
+        <p>7. session_destroy - it will destroy all data which is registered to a specific session</p>
 
-        <dt>session_encode</dt>
-        <dd>it will encode the current session data as a session encoded string</dd>
+        <p>8. session_encode - it will encode the current session data as a session encoded string</p>
 
-        <dt>session_gc</dt>
-        <dd>it will perform the session data garbage collection</dd>
+        <p>9. session_gc - it will perform the session data garbage collection</p>
 
-        <dt>session_get_cookie_params</dt>
-        <dd>it will fetch the session cookie parameters</dd>
+        <p>10. session_get_cookie_params - it will fetch the session cookie parameters</p>
 
-        <dt>session_id</dt>
-        <dd>it will either get and/or set the current session module</dd>
+        <p>11.session_id - it will either get and/or set the current session module</p>
 
-        <dt>session_is_registered</dt>
-        <dd>It will investigate whether a global variable is registered in a specific session</dd>
+        <p>12.session_is_registered - It will investigate whether a global variable is registered in a specific session</p>
 
-        <dt>session_module_name</dt>
-        <dd>it will either get and/or set the current session module</dd>
+        <p>13.session_module_name - it will either get and/or set the current session module</p>
         
-        <dt>session_name</dt>
-        <dd>it will either get and/or set the current session name</dd>
+        <p>14.session_name - it will either get and/or set the current session name</p>
 
-        <dt>session_regenerate_id</dt>
-        <dd>it will update the current session id to a new one.</dd>
+        <p>15. session_regenerate_id - it will update the current session id to a new one.</p>
 
-        <dt>session_register_shutdown</dt>
-        <dd>session shutdown function</dd>
+        <p>16.session_register_shutdown - session shutdown function</p>
 
-        <dt>session_register</dt>
-        <dd>it will register 1 or more global variable using the current session you are using.</dd>
+        <p>17.session_register - it will register 1 or more global variable using the current session you are using.</p>
 
-        <dt>session_reset</dt>
-        <dd>it will reload session arrays with their original values</dd>
+        <p>18.session_reset - it will reload session arrays with their original values</p>
         
-        <dt>session_save_path</dt>
-        <dd>it will either get and/or set the current session save path</dd>
+        <p>19.session_save_path - it will either get and/or set the current session save path</p>
 
-        <dt>session_set_cookie_params</dt>
-        <dd>it will set the session cookie parameters</dd>
+        <p>20. session_set_cookie_params - it will set the session cookie parameters</p>
 
-        <dt>session_set_save_handler</dt>
-        <dd>it will sets the use-level session storage functions</dd>
+        <p>21. session_set_save_handler - it will sets the use-level session storage functions</p>
 
-        <dt>session_start</dt>
-        <dd>it may start a new or resume an existing session</dd>
+        <p>22. session_start - it may start a new or resume an existing session</p>
 
-        <dt>session_status</dt>
-        <dd>it will return the current session status</dd>
+         <p>23. session_status - it will return the current session status</p>
 
-        <dt>session_unregister</dt>
-        <dd>it will unregister a global variable from the current session</dd>
+        <p>24. session_unregister - it will unregister a global variable from the current session</p>
         
-        <dt>session_unset</dt>
-        <dd>it will free all session variables</dd>
+        <p>25.session_unset - it will free all session variables</p>
 
-        <dt>session_write_close</dt>
-        <dd>it will write session data and end session</dd>
+        <p>26.session_write_close - it will write session data and end session</p>
     </dl>
 </section>
 
@@ -156,6 +143,37 @@
 	<p> For security purposes since it's an open source everyone can view PHP's source code so it can easily hack it to identify bugs in the code. </p>
 </section>
 	  
-	  
-  </body>
+  <footer>
+    <div class="container">
+      <div class="col-md-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+        <h4>About Us</h4>
+        <p>This page is meant for educational purposes for the School of Computing and Information Sciences, Web Systems and Technologies, 2nd Semester SY 2017-2018</p>
+      </div>
+
+      <div class="col-md-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+        <div class="text-center">
+            <br>
+            <br>
+            <h4>COPYRIGHT - WEBTECH LECTURE 2018</h4>
+        </div>
+      </div>
+
+      <div class="col-md-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="900ms">
+        <div class="">
+          <h4>Members:</h4>
+          <p>
+          Dela Peña, Miguel Angelus<br/>
+          Elegado, Angel Nica<br/>
+          Leones, Alfa Leizel<br/>
+          Ocado, Jennelyn<br/>
+          Yu, Rommel Justin
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+
 </html>
