@@ -58,16 +58,18 @@
   <!--/header-->
   
   <body>
-	<Section>
-	<center>
-	<h2>What is AJAX?</h2>
-	<br>
-	<h4>AJAX(Asynchronous JavaScript and XML) is a technique that make our lives easier when creating a fast and dynamic web pages.<br>
-	AJAX allows us to update web pages asynchronously by exchanging small amounts of information<br> with the server in the background.</h4>
-	<h2>Important Features of AJAX</h2>
-	<h4>AJAX make our web pages more faster, depends on server technology, increase the performance<br> of the web page and giving users an interactive web applications.</h4>
-	</center>
-	<section>
+	<div class="container">
+	<button class="accordion">
+	<h3>What is AJAX?</h3></button>
+	<div class="content">
+	<p>AJAX(Asynchronous JavaScript and XML) is a technique that make our lives easier when creating a fast and dynamic web pages.<br>
+	AJAX allows us to update web pages asynchronously by exchanging small amounts of information<br> with the server in the background.</p>
+	</div>
+	<button class="accordion"><h3>Important Features of AJAX</h3></button>
+	<div class="content">
+	<p>AJAX make our web pages more faster, depends on server technology, increase the performance<br> of the web page and giving users an interactive web applications.</p>
+	</div>
+	
 			<h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AJAX Sample Codes</h2>
 			<h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Creating a XMLHttpRequest object.</h4>
 			<h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Example 1: <img src="img/ajax1.png"  height="70" width="450" alt="ajax1"></h5>
@@ -106,10 +108,23 @@ for POST requests. the difference between GET and POST is that &nbsp;&nbsp;&nbsp
 		<br>
 		<h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;getResponseHeader() <br></h4>
 		<h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Example 11: <img src="img/ajax11.png"  height="150" width="450" alt="ajax11"></h5>
-		
-		</section>
-	</section>
-	
+		</div>
+	<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    });
+}
+</script>
 	   <footer>
     <div class="container">
       <div class="col-md-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
