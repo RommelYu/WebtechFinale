@@ -1138,3 +1138,27 @@ ul.social-network li a {
 	font-size:12px;
 	text-shadow:none;
 } 
+
+
+
+
+ul {
+    margin-left:50px;
+}
+
+li {
+    margin-left:50px;
+}
+
+h3 {line-height: 1.4;
+    margin-left:100px;
+}
+
+
+p {
+     line-height: 1.4;
+    margin-left:100px;
+    margin-right:100px;
+}
+
+ 
