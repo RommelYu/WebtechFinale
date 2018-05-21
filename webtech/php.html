@@ -62,61 +62,31 @@
   <!--/header-->
 
   <body>
-  <div class="container">
-  <button class="accordion">
-	<h3>What is PHP?</h3></button>
-	<div class="content">
-	<p>It is an open source scripting language that is widely used. <abbr title="Hypertext Preprocessor">PHP</abbr> file can contain <abbr title="Hypertext Markup Language">HTML</abbr>, JavaScript, <abbr title="Cascading Style Sheets">CSS</abbr>, and <abbr title="Hypertext Preprocessor">PHP</abbr> code. Scripts are executed on the server and returned to the browser as plain HTML.</p>  
-	<p>PHP was developed by Rasmus Lerdorf in 1994 who wrote the number if <abbr title="Common Gateway Interface">CGI </abbr> a binaries to maintain his personal homepage. PHP is a tool for making a dynamic content, interactive web pages or used for CGI scripts, it can also create, read, write and delete a files on the server, can add, delete and modify a data to the database and can encrypt data </p> 
-	<p> PHP can generate dynamic page content, create, open, write,delete and close file on the server. It can add, delete, modify data in your database. It can send and receive cookies and can encrypt data.PHP originally known as Personal Home Page but it is now a recursive acronym and some they called it 'Perl Killer' of the server side scripting world. It is integrated with a number of popular databases, including MySQL, PostgreSQL, Oracle, Sybase, Informix, and Microsoft SQL Server. PHP is pleasingly zippy in its execution, especially when compiled as an Apache module on the Unix side. The MySQL server, once started, executes even very complex queries with huge result sets in record-setting time.</p>
+	<h3>What is PHP?</h3>
+<p>It is an open source scripting language that is widely used. <abbr title="Hypertext Preprocessor">PHP</abbr> file can contain <abbr title="Hypertext Markup Language">HTML</abbr>, JavaScript, <abbr title="Cascading Style Sheets">CSS</abbr>, and <abbr title="Hypertext Preprocessor">PHP</abbr> code. Scripts are executed on the server and returned to the browser as plain HTML.</p>  
+<p>PHP was developed by Rasmus Lerdorf in 1994 who wrote the number if <abbr title="Common Gateway Interface">CGI </abbr> a binaries to maintain his personal homepage. PHP is a tool for making a dynamic content, interactive web pages or used for CGI scripts, it can also create, read, write and delete a files on the server, can add, delete and modify a data to the database and can encrypt data </p> 
+<p> PHP can generate dynamic page content, create, open, write,delete and close file on the server. It can add, delete, modify data in your database. It can send and receive cookies and can encrypt data.PHP originally known as Personal Home Page but it is now a recursive acronym and some they called it 'Perl Killer' of the server side scripting world. It is integrated with a number of popular databases, including MySQL, PostgreSQL, Oracle, Sybase, Informix, and Microsoft SQL Server. PHP is pleasingly zippy in its execution, especially when compiled as an Apache module on the Unix side. The MySQL server, once started, executes even very complex queries with huge result sets in record-setting time.</p>
 
 	<p>PHP supports a large number of major protocols such as POP3, IMAP, and LDAP. PHP4 added support for Java and distributed object architectures (COM and CORBA), making n-tier development a possibility for the first time. PHP has sufficient enough to run a largest social network and on different platforms and it is also suitable in most servers that we used today like apache, IIS and etc.<p>
-	</div>
-	
-	<button class="accordion">
-    <h3>Super Global Variables</h3></button>
-	<div class="content">
+
+<section>
+    <h3>Super Global Variables</h3>
     <p>Can be used or accessed anywhere in the script</p>
     <p>here are the superglobal variables:</p>
-	<ul>
-    <li>$_GLOBALS
-	<p>This is a PHP super global variable which is used to access global variables from anywhere in the PHP
-                    script (also from within functions or methods).</p></li>
-        <li>$_SERVER
-		<p>This is a PHP super global variable which holds information about headers, paths, and script
-                    locations.
-                </p></li>
-        <li>$_REQUEST
-		<p>This is used to collect data after submitting an HTML form</p></li>
-        <li>$_POST
-		<p>This is widely used to collect form data after submitting an HTML form with method="post". $_POST is
-                    also widely used to pass variables.</p></li>
-        <li>$_GET
-		<p>This can also be used to collect form data after submitting an HTML form with method="get".</p></li>
-        <li>$_FILES
-		<p>An associative array of items uploaded to the current script via the HTTP POST method.
-                    The structure of this array is outlined in the POST method uploads section.</p></li>
-        <li>$_ENV
-		<p>These variables are imported into PHP's global namespace from the environment under which the PHP
-                    parser is running.
-                    Many are provided by the shell under which PHP is running and different systems are likely running
-                    different kinds of shells,
-                    a definitive list is impossible.</p></li>
-        <li>$_COOKIE
-		 <p>PHP transparently supports HTTP cookies.
-                    Cookies are a mechanism for storing data in the remote browser and thus tracking or identifying
-                    return users.
-                </p></li>
-        <li>$_SESSION
-		<p>Sessions are a simple way to store data for individual users against a unique session ID.
-                    This can be used to persist state information between page requests.
-                    Session IDs are normally sent to the browser via session cookies and the ID is used to retrieve
-                    existing session data.</p></li>
-	</div>
-	</ul>
-	<button class="accordion">
-    <h3>PHP Session Functions</h3></button>
-    <div class="content">
+    <p>$_GLOBALS
+        <p>$_SERVER</p>
+        <p>$_REQUEST</p>
+        <p>$_POST</p>
+        <p>$_GET</p>
+       <p>$_FILES</p>
+        <p>$_ENV</p>
+        <p>$_COOKIE</p>
+        <p>$_SESSION</p>
+</section>
+
+<section>
+    <h3>PHP Session Functions</h3>
+    
         <p>1. session_abort - it will disregard the array changes and finishes the session.</p>
 
         <p>2. session_cache_expire - it will return the current cache expire</p>
@@ -169,39 +139,188 @@
 
         <p>26.session_write_close - it will write session data and end session</p>
     </dl>
-</div>
+</section>
 
-	<button class="accordion"> 
-    <h3>Advantages of PHP</h3></button>
-	<div class="content">
+	  <section>
+    <h3>Advantages of PHP</h3>
     <p>PHP is fast and flexible especially it is much powerful when it comes to a most well know sites in the world.</p>
     <p>PHP is easy to use especially for those who are familiar with C, it’s very easy for them to learn and create a website using PHP.</p>
-	</div>
-	<button class="accordion">	
-	<h3>Disadvantages of PHP</h3></button>
-	<div class="content">
+		
+	<h3>Disadvantages of PHP</h3>
     <p> It is not suitable for huge application so it's hard to maintain since it is not that modular and PHP is  generally hard to expand the language to add a non-standard functionalities that isn’t handled by its built-in functions. </p>
 	<p> For security purposes since it's an open source everyone can view PHP's source code so it can easily hack it to identify bugs in the code. </p>
+</section>
+<section>
+<h3>PHP example codes</h3>
+<p>Creating a variable.
+<p>to declare a variable first type the dollar($) sign following it with the variable name along with the value.</p>
+<h3><pre><em style="color: red">&lt;?php</em>
+$name=<em style="color: #B03A2E"> "Miguel"</em>;
+$MidtermGrade =<em style="color: red"> 65</em>;
+$Average =<em style="color: red"> 65.3</em>;
+<em style="color: red">?&gt;</em></pre></h3>
 
-</div>
-<br><br>
-</div>
-	<script>
-var acc = document.getElementsByClassName("accordion");
-var i;
+<p>Echo and Print<br>
+Echo and Print is used to output the data on the screen. echo has no return value while print has a return value so that it can be used in expressions.</p>
+<h3><pre><em style="color: red">&lt;?php</em>
+<em style="color: blue">echo</em> <em style="color: #B03A2E">"&lt;h2&gt;HELLO POTATO!&lt;/h2&gt;"</em>
+<em style="color: blue">echo</em> <em style="color: #B03A2E">"HELLO world!"</em>
+<em style="color: blue">echo</em> <em style="color: #B03A2E">"Hello Universe!"</em><em style="color: blue">&lt;br&gt;</em>
+<em style="color: blue">echo</em> <em style="color: #B03A2E"">"This "</em>, <em style="color: #B03A2E">"string "</em>, <em style="color: #B03A2E">"was "</em>, <em style="color: #B03A2E">"made "</em>, <em style="color: #B03A2E">"with multiple parameters."</em>;
+<em style="color: red">?&gt;</em>
+<br>
+<em style="color: red">&lt;?php</em>
+<em style="color: blue">print</em> <em style="color: #B03A2E">"Hello world!&lt;br&gt;"</em>;
+<em style="color: blue">print</em> <em style="color: #B03A2E">"Hello sweet potato"</em>;
+<em style="color: red">?&gt;</em></pre></h3>
+<br>
+<p>Displaying a variable.</p>
+<h3><pre>
+<em style="color: red">&lt;?php</em>
+$name= <em style="color: #B03A2E">"Miguel"</em>;
+$midtermGrade = <em style="color: red">65</em>;
+$Average = <em style="color: red">65.3</em>;
 
-for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var panel = this.nextElementSibling;
-        if (panel.style.display === "block") {
-            panel.style.display = "none";
-        } else {
-            panel.style.display = "block";
-        }
-    });
+<em style="color: blue">echo</em> <em style="color: #B03A2E">"NAME:"</em> . $name . <em style="color: #B03A2E">"&lt;br&gt;"</em>;
+<em style="color: blue">echo</em> "Midterm Grade:" . $midtermGrade . <em style="color: #B03A2E">"&lt;br&gt;"</em>; 
+
+<em style="color: blue">print</em> <em style="color: #B03A2E">"NAME:"</em> . $name . <em style="color: #B03A2E">"&lt;br&gt;"</em>;
+<em style="color: blue">print</em> "Midterm Grade:" . $midtermGrade . <em style="color: #B03A2E">"&lt;br&gt;"</em>; 
+<em style="color: red">?&gt;</em>
+</pre></h3>
+<br>
+<p>PHP constants<br>
+Constant is an identifier for a value. This value cannot be changed during the script.
+<h3><pre>
+<em style="color: red">&lt;?php</em>
+define(<em style="color: #B03A2E">"hello"</em>, <em style="color: #B03A2E">"hello world"</em>);
+<em style="color: blue">echo</em> hello;
+<em style="color: red">?&gt;</em>
+</pre></h3>
+<br>
+<p>Conditional Statements<br>
+if statement</p>
+<h3><pre>
+<em style="color: red">&lt;?php</em>
+$name = <em style="color: #B03A2E">"miguel"</em>;
+$grade = <em style="color: blue">95</em>;
+
+<em style="color: blue">if</em> ($name == <em style="color: #B03A2E">"miguel"</em>) {
+    echo "your grade is" . $grade . "&lt;br&gt;";
 }
-</script>  
+<em style="color: red">?&gt;</em></pre></h3>
+<br>
+<p>if else statement</p>
+<h3><pre>
+<em style="color: red">&lt;?php</em>
+$name = <em style="color: #B03A2E">"miguel"</em>;
+$grade = <em style="color: blue">95</em>;
+
+<em style="color: blue">if</em> ($name == <em style="color: #B03A2E">"miguel"</em>) {
+    echo "your grade is" . $grade . "&lt;br&gt;";
+}<em style="color: blue">else</em>
+    <em style="color: blue">echo</em> <em style="color: #B03A2E">"YOU ARE NOT MIGUEL."</em>;
+<em style="color: red">?&gt;</em></pre></h3>
+<BR>
+<P>if elsif statement</p>
+<h3><pre>
+<em style="color: red">&lt;?php</em>
+<em style="color: blue">if</em> ($name == <em style="color: #B03A2E">"miguel"</em>) {
+    echo "your grade is" . $grade . "&lt;br&gt;";
+}<em style="color: blue">elseif</em> ($name != <em style="color: #B03A2E">"miguel"</em>) {
+  <em style="color: blue">echo</em> <em style="color: #B03A2E">"YOU ARE NOT MIGUEL."</em>;
+}<em style="color: blue">else</em> 
+  <em style="color: blue">echo</em> <em style="color: #B03A2E">"PATATAS"</em>;
+<em style="color: red">?&gt;</em>
+</pre></h3>
+<br>
+<p> Switch Case</p>
+<h3><pre>
+<em style="color: red">&lt;?php</em>
+<em style="color: blue">switch</em> ($laptopBrand) {
+    <em style="color: blue">case</em> "asus":
+        <em style="color: blue">echo</em> <em style="color: #B03A2E">"Your laptop brand is Asus."</em>;
+        break;
+    <em style="color: blue">case</em> "samsung":
+        <em style="color: blue">echo</em> <em style="color: #B03A2E">"Your laptop brand is Samsung."</em>;
+        <em style="color: blue">break</em>;
+   <em style="color: blue">default</em>:
+        <em style="color: blue">echo</em> <em style="color: #B03A2E">"Your laptop brand is not Samsung or Asus."</em>;
+
+}
+<em style="color: red">?&gt;</em>
+</pre></h3>
+<br>
+<p>While loop</p>
+<h3><pre>
+<em style="color: red">&lt;?php</em>
+$num = <em style="color: red">0</em>; 
+<em style="color: blue">while</em>($num <= <em style="color: red">3</em>) {
+    <em style="color: blue">echo</em> <em style="color: #B03A2E">"number: $num"</em>;
+    $num++;
+<em style="color: red">?&gt;</em>
+</pre></h3>
+<br>
+<p>Do While loop</p>
+<h3><pre>
+<em style="color: red">&lt;?php</em>
+$num = <em style="color: red">0</em>;
+<em style="color: blue">do</em> {
+    <em style="color: blue">echo</em> <em style="color: #B03A2E">"number: $num"</em>;
+    $num++;
+} <em style="color: blue">while</em>($num <= <em style="color: red">3</em>);
+<em style="color: red">?&gt;</em>
+</pre></h3>
+<br>
+<p>For loop</p>
+<h3><pre>
+<em style="color: red">&lt;?php</em>
+<em style="color: blue">for</em> ($num = <em style="color: red">0</em>; $num <= <em style="color: red">3</em>; $num++) {
+    <em style="color: blue">echo</em> <em style="color: #B03A2E">"number: $num"</em>;
+}
+<em style="color: red">?&gt;</em>
+</pre></h3>
+<br>
+<p>Foreach loop</p>
+<h3><pre>
+<em style="color: red">&lt;?php</em>
+$num = array(<em style="color: #B03A2E">"0"</em>, <em style="color: #B03A2E">"1"</em>, <em style="color: #B03A2E">"2"</em>, <em style="color: #B03A2E">"3"</em>); 
+
+<em style="color: blue">foreach</em> ($num <em style="color: blue">as</em> $digits) {
+    <em style="color: blue">echo</em> <em style="color: #B03A2E">"$digits"</em>;
+}
+<em style="color: red">?&gt;</em>
+</pre></h3>
+<br>
+<p>PHP user defined function</p>
+<h3><pre>
+<em style="color: red">&lt;?php</em>
+<em style="color: blue">function</em> helloWorld() {
+    <em style="color: blue">echo</em> <em style="color: #B03A2E">"Hello universe."</em>;
+}
+helloWorld();
+<em style="color: red">?&gt;</em>
+</pre></h3>
+<br>
+<p>PHP array</p>
+<h3><pre>
+<em style="color: red">&lt;?php</em>
+$name = array("bogart", "kora", "pedro");
+
+<em style="color: green">//manually assigned index</em>
+$name[0] = <em style="color: #B03A2E">"bogart"</em>;
+$name[1] = <em style="color: #B03A2E">"kora"</em>;
+$name[2] = <em style="color: #B03A2E">"pedro"</em>;
+
+<em style="color: green">//sort array in ascending order</em>
+<em style="color: blue">sort</em>($name);
+<em style="color: green">//sort array in descending order</em>
+<em style="color: blue">rsort</em>($name);
+<em style="color: green">//sort array according to value.</em>
+<em style="color: blue">asort</em>($name);
+<em style="color: red">?&gt;</em>
+</pre></h3>
+</section>
   <footer>
     <div class="container">
       <div class="col-md-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
