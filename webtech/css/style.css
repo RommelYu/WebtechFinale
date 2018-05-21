@@ -1012,10 +1012,10 @@ footer .btn-gamp a {
 	letter-spacing: 3px;
 	color: #fff;
 	width: 180px;
-	height: 60px;
+	height: 45px;
 	text-align: center;
 	display: inline-block;
-	line-height: 45px;
+	line-height: 30px;
 	margin-right:170px;
 	margin-top:20px;
 	background:#272727;
@@ -1036,10 +1036,10 @@ footer .btn-gamp input {
 	letter-spacing: 3px;
 	color: #272727;	
 	width: 180px;
-	height: 60px;
+	height: 30px;
 	text-align: center;
 	display: inline-block;
-	line-height: 56px;
+	line-height: 50px;
 	border-radius:0px;
 	border: 1px solid #fff;
 }
@@ -1148,6 +1148,7 @@ ul {
 
 li {
     margin-left:50px;
+	color: black;
 }
 
 h3 {line-height: 1.4;
@@ -1159,6 +1160,34 @@ p {
      line-height: 1.4;
     margin-left:100px;
     margin-right:100px;
+	font-size:15px;
+}
+
+.accordion {
+    background-color: #eee;
+    color: white;
+    cursor: pointer;
+    padding: 8px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+	border-bottom: 1px solid #ddd;
+   box-sizing: border-box;
+}
+
+.active, .accordion:hover {
+    background-color: #ccc; 
+}
+
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+	border-bottom: 1px solid #ddd;
 }
 
  
