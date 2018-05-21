@@ -39,16 +39,20 @@
           </div>
         </div>
 
-      <div class="navbar-collapse collapse">
-          <div class="menu">
-            <ul class="nav nav-tabs" role="tablist">
-              <li role="presentation"><a href="index.html">Home</a></li>
-              <li role="presentation"><a href="services.html" class="active">Final Notes</a></li>
-              <li role="presentation"><a href="exercise.html">Excercise</a></li>
-        <li role="presentation"><a href="aboutus.html">About Us</a></li>
-            </ul>
-          </div>
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
         </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+              <li><a href="services.html"><h1>Back</h1></a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
 
           
       </div>
@@ -60,18 +64,18 @@
     
   <body>
 	  <section>
-			<h2> <abbr title="Open web application security project">OWASP </abbr></h2>
+			<h3> <abbr title="Open web application security project">OWASP </abbr></h3>
 			<p>OWASP stands for Open Web Application Security Project. This organization is non-profit who are dedicated to provide a an equal and practical information about application security. <abbr title="Open web application security project">OWASP</abbr> community helps organizations develop secure applications. OWASP founded in 2001 as an open-source security community centered around the goal of spreading application security awareness, the OWASP is most famous for their OWASP Top 10 which has become the industry gold standard for application security. They come up with standards, freeware tools and conferences that help organizations as well as researchers. OWASP top 10 is the list of top 10 application vulnerabilities along with the risk, impact, and countermeasures. The list is usually refreshed in every 3-4 years.</p>
 		</section>
 
 	  <section>
-			<h2> What is <abbr title="Open web application security project">OWASP </abbr> Top 10?</h2>
+			<h3> What is <abbr title="Open web application security project">OWASP </abbr> Top 10?</h3>
 			<p>First appearing in 2003 and continuing with regular updates, the OWASP Top Ten is a compilation of the Top 10 Most Critical Application Security Risks which is produced with the goal of empowering developers and security teams to ensure that the applications that they build are secure against the most critical risks. Building on the success of the original OWASP Top Ten for web applications, OWASP has produced further “Top 10” lists for Internet of Things vulnerabilities and another list for the top Mobile development security risks.
 		  	<p>OWASP members compile the lists by examining both the occurrence rate and overall severity of the threat. Certain threats can appear often but are easy to prevent, detect and mitigate while others are potentially deadly but rare when it comes to finding them "in the wild".</p>
 		</section>
 		
 	  <section>
-		<h2>Top 10 Vulnerabilities of OWASP:</h2>
+		<h3>Top 10 Vulnerabilities of OWASP:</h3>
 			<p><b>1. Injections</b><br> This is a code injection technique used by attackers as they place malicious data into systems and other areas of a web app through deserted inputs thus causing great harm. Injection attacks occur when the user is able to input untrusted data tricking the application/system to execute unintended commands. Injections can be – SQL queries, PHP queries, LDAP queries and OS commands.</p> <br>
 				<p><b>2. Broken Authentication and Session Management</b><br> Broken authentication and session management flaws occur when an application’s authentication functions are not implemented correctly, allowing attackers to anonymously exploit a user’s identity through stolen passwords, personal user information, valuable data, session keys, and other incorrect implementations through user credentials.<br> To prevent "Broken Authentication and Session Management",  1. Use of multifactor authentication, 2. session isolation, 3. using secured cokkies. </p><br>
 				<p><b>3. Cross-Site Scripting</b><br> It is also known as XSS,  occurs when an attacker is able to insert untrusted data/scripts into a web page. The data/scripts inserted by the attackers get executed in the browser can steal users data, deface websites etc.<br> To prevent "Insecure Direct Object References", 1. Output encoding and escaping untrusted characters, 2. Enabling Content-Security-policy (CSP)</p><br>

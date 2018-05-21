@@ -38,16 +38,20 @@
           </div>
         </div>
 
-       <div class="navbar-collapse collapse">
-          <div class="menu">
-            <ul class="nav nav-tabs" role="tablist">
-              <li role="presentation"><a href="index.html">Home</a></li>
-              <li role="presentation"><a href="services.html" class="active">Final Notes</a></li>
-              <li role="presentation"><a href="exercise.html">Excercise</a></li>
-        <li role="presentation"><a href="aboutus.html">About Us</a></li>
-            </ul>
-          </div>
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
         </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+              <li><a href="services.html"><h1>Back</h1></a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
 
           
       </div>
@@ -59,14 +63,14 @@
  <body>
 	
 	<section>
-		<h2>What is Node.js</h2>
+		<h3>What is Node.js</h3>
 		<p>Node.js is an open source and cross-platform runtime environment for executing JavaScript code outside of a browser. The client can store data, send emails, push notifications to the server. It builds highly scalable data and real time backend services. It is runtime environment for executing JavaScript code. Node.js allows the creation of Web servers and networking tools using JavaScript and a collection of "modules" that handle various core functionality. Node is an asynchronous by default so in a single thread it can handle multiple requests from the client.</p>
 		<p> Node.js was originally written by Ryan Dahl in 2009, about thirteen years after the introduction of the first server-side JavaScript environment, Netscape's LiveWire Pro Web. The initial release supported only Linux and Mac OS X. Its development and maintenance was led by Dahl and later sponsored by Joyent. Node.js is a very powerful JavaScript-based framework/platform built on Google Chrome's JavaScript V8 Engine. It is used to develop I/O intensive web applications like video streaming sites, single-page applications, and other web applications. </p>		
 		<p>The node can serve more clients without the need for more hardware. But node should not be used for CPU intensive applications like a video encoding or an image manipulation service. </p>
 	 </section>
 	 
 	 <section>
-		<h2>Nodes Features</h2>
+		<h3>Nodes Features</h3>
 		<p><b>Asynchronous and Event Driven</b> - All APIs of Node.js library are asynchronous, that is, non-blocking. It essentially means a Node.js based server never waits for an API to return data. </p>
 		<p><b>No Buffering</b> - Node.js applications never buffer any data. These applications simply output the data in chunks.</p>
 		<p><b>Single Threaded but Highly Scalable</b> - Node.js uses a single threaded model with event looping. Node.js uses a single threaded program and the same program can provide service to a much larger number of requests than traditional servers like Apache HTTP Server.</p>
@@ -74,14 +78,14 @@
 	 </section>
 	 
 	<section>
-		<h2>Node.js Libraries</h2>
+		<h3>Node.js Libraries</h3>
 		<p>Node.js libraries are divided into modules (a module is a standalong JS file). </p>
 		<p>Node.js Core Library - it is consists of predefined modules that a developer can use without having to download the module before requiring it in a Node.js file. One module that is in the core library of Node.js is HTTP and to include HTTP in your file you could do: var http = require('http');
 		</p>
 		<p>Modules not included in the Core Library - To install modules that are not included in the Core Library you could type <kbd>npm install [name of module]</kbd>. An example is the mysql module which is not in the core library of Node.js</p>
 		<p>Some modules to consider - Node.js also has modules that acts as a framework, an example is the Express framework which is a backend framework which facilitates difficult things (HTTP requests, responds and many more) and it is complimentary with pug(also known as Jade) which is also a Node.js module that is influenced by Haml, what pug does is that it generates html code with its own syntax.</p>
 	</section>
-	<h2>Node.js sample code</h2>
+	<h3>Node.js sample code</h3>
 	<h3>Modules</h3>
 	Used to include an HTTP module. Require() method.
 	<h4>Example 1: <img src="img/img/nodejs1.png" height="60" width="300"></h4>
