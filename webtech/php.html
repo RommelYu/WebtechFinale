@@ -62,15 +62,19 @@
   <!--/header-->
 
   <body>
-	<h3>What is PHP?</h3>
+  <div class="container">
+   <button class="accordion">
+	<h3>What is PHP?</h3></button>
+<div class="content">
 <p>It is an open source scripting language that is widely used. <abbr title="Hypertext Preprocessor">PHP</abbr> file can contain <abbr title="Hypertext Markup Language">HTML</abbr>, JavaScript, <abbr title="Cascading Style Sheets">CSS</abbr>, and <abbr title="Hypertext Preprocessor">PHP</abbr> code. Scripts are executed on the server and returned to the browser as plain HTML.</p>  
 <p>PHP was developed by Rasmus Lerdorf in 1994 who wrote the number if <abbr title="Common Gateway Interface">CGI </abbr> a binaries to maintain his personal homepage. PHP is a tool for making a dynamic content, interactive web pages or used for CGI scripts, it can also create, read, write and delete a files on the server, can add, delete and modify a data to the database and can encrypt data </p> 
 <p> PHP can generate dynamic page content, create, open, write,delete and close file on the server. It can add, delete, modify data in your database. It can send and receive cookies and can encrypt data.PHP originally known as Personal Home Page but it is now a recursive acronym and some they called it 'Perl Killer' of the server side scripting world. It is integrated with a number of popular databases, including MySQL, PostgreSQL, Oracle, Sybase, Informix, and Microsoft SQL Server. PHP is pleasingly zippy in its execution, especially when compiled as an Apache module on the Unix side. The MySQL server, once started, executes even very complex queries with huge result sets in record-setting time.</p>
 
 	<p>PHP supports a large number of major protocols such as POP3, IMAP, and LDAP. PHP4 added support for Java and distributed object architectures (COM and CORBA), making n-tier development a possibility for the first time. PHP has sufficient enough to run a largest social network and on different platforms and it is also suitable in most servers that we used today like apache, IIS and etc.<p>
-
-<section>
-    <h3>Super Global Variables</h3>
+</div>
+<button class="accordion">
+    <h3>Super Global Variables</h3></button>
+	<div class="content">
     <p>Can be used or accessed anywhere in the script</p>
     <p>here are the superglobal variables:</p>
     <p>$_GLOBALS
@@ -82,11 +86,10 @@
         <p>$_ENV</p>
         <p>$_COOKIE</p>
         <p>$_SESSION</p>
-</section>
-
-<section>
-    <h3>PHP Session Functions</h3>
-    
+		</div>
+<button class="accordion">
+    <h3>PHP Session Functions</h3></button>
+		<div class="content">
         <p>1. session_abort - it will disregard the array changes and finishes the session.</p>
 
         <p>2. session_cache_expire - it will return the current cache expire</p>
@@ -139,18 +142,19 @@
 
         <p>26.session_write_close - it will write session data and end session</p>
     </dl>
-</section>
-
-	  <section>
-    <h3>Advantages of PHP</h3>
+	</div>
+<button class="accordion">
+    <h3>Advantages of PHP</h3></button>
+	<div class="content">
     <p>PHP is fast and flexible especially it is much powerful when it comes to a most well know sites in the world.</p>
     <p>PHP is easy to use especially for those who are familiar with C, it’s very easy for them to learn and create a website using PHP.</p>
-		
-	<h3>Disadvantages of PHP</h3>
+	</div>
+<button class="accordion">
+	<h3>Disadvantages of PHP</h3></button>
+	<div class="content">
     <p> It is not suitable for huge application so it's hard to maintain since it is not that modular and PHP is  generally hard to expand the language to add a non-standard functionalities that isn’t handled by its built-in functions. </p>
 	<p> For security purposes since it's an open source everyone can view PHP's source code so it can easily hack it to identify bugs in the code. </p>
-</section>
-<section>
+	</div>
 <h3>PHP example codes</h3>
 <p>Creating a variable.
 <p>to declare a variable first type the dollar($) sign following it with the variable name along with the value.</p>
@@ -320,7 +324,26 @@ $name[2] = <em style="color: #B03A2E">"pedro"</em>;
 <em style="color: blue">asort</em>($name);
 <em style="color: red">?&gt;</em>
 </pre></h3>
-</section>
+
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    });
+}
+</script>  
+
   <footer>
     <div class="container">
       <div class="col-md-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
